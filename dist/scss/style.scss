@@ -1,0 +1,54 @@
+@import "custom-variables";
+@import "fonts";
+@import "reset";
+@import "default-clases";
+@import "layout";
+
+.inner{
+	@extend %vertical-align;
+	height: calc( 100vh - 80px);
+	background: url("../img/inner-bg.jpg") no-repeat top center;
+	background-size: cover;
+	text-align: center;
+		.inner-block{
+			color: #fff;
+			h1{
+				font-size: 72px;
+				padding-top: 25px;
+				margin-bottom: 25px;
+			}
+			span{
+				display: inline-block;
+				font-size: 28px;
+				margin-bottom: 40px;
+			}
+			.inner-form{
+				background: rgba(0, 0, 0, .50);
+				border-radius: 3px;
+				padding: 25px 35px 43px 35px;
+			.form-control{
+				width: 325px;
+				margin-left: 6px;
+			}
+			.form-btn{
+				width: 115px;
+				float: right;
+				margin-left: 6px;
+			}
+		}	
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

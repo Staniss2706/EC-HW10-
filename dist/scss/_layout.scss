@@ -1,0 +1,46 @@
+@import "custom-variables";
+
+.container{
+	width: $desktopContainerWidth;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.header{
+	height: $desktopHeaderHeight;
+	width: 100%;
+	background: #fff;
+	.logo{
+		float: left;
+		padding-top: 15px;
+	}
+	.header-nav{
+		float: right;
+		padding: 26px 20px 0 0;
+		li{
+			display: inline-block;
+			margin-right: 25px;
+			a{
+				font-size: 16px;
+				&:hover{
+					color: $generalOrange;
+				}
+			}
+		}
+	}
+}
+.form-control{
+	height: 57px;
+	width: 100%;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #7e878d;
+	padding-left: 14px;
+}
+.form-btn{
+	height: 57px;
+	background: #f26523;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0 29px 0 25px;
+}
