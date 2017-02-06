@@ -2,7 +2,10 @@
 @import "fonts";
 @import "reset";
 @import "default-clases";
+@import "sprite";
+@include sprites($spritesheet-sprites);
 @import "layout";
+
 
 .inner{
 	@extend %vertical-align;
@@ -14,10 +17,9 @@
 			color: #fff;
 			h1{
 				font-size: 72px;
-				padding-top: 25px;
 				margin-bottom: 25px;
 			}
-			span{
+			& > span{
 				display: inline-block;
 				font-size: 28px;
 				margin-bottom: 40px;
@@ -26,24 +28,235 @@
 				background: rgba(0, 0, 0, .50);
 				border-radius: 3px;
 				padding: 25px 35px 43px 35px;
-			.form-control{
-				width: 325px;
-				margin-left: 6px;
-			}
-			.form-btn{
-				width: 115px;
-				float: right;
-				margin-left: 6px;
+				text-align: left;
+				.more-option{
+					font-size: 14px;
+					display: inline-block;
+					cursor: pointer;
+					padding: 8px 0 40px 0;
+				}	
+				.first-form{
+					.form-control{
+						width: 325px;
+						margin-right: 6px;
+			        }
+				}
+				.second-form{
+					display: none;
+					.input-group{
+						text-align: left;
+						margin-bottom: 13px;
+					}
+					.form-control{
+						width: 240px;
+						height: 49px;
+						margin-left: 6px;
+					}
+				}
 			}
 		}	
-	}	
+	}
+.simple-block{
+	text-align: center;
+	font-size: 18px;
+	padding: 30px 0;
+	a{
+		color: #f26523;
+		&:hover{
+			color: #30436b;
+		}
+	}
+}
+.service-item{
+	width: 33.3333%;
+	float: left;
+	height: 218px;
+	a{ 
+		display: block;
+		font-size: 20px;
+		color: #ef6223;
+		padding: 8px 0 12px 0;
+	    & + span{
+	    	color: inherit;
+	    } 
+	}
+	p{
+		font-size: 16px;
+		color: #6c767e;
+		line-height: 150%;
+		width: 70%;
+	}
+}
+.block{
+	height: 158px;
+	h2{
+		font-size: 24px;
+	}
+}
+.bg-blue{
+	padding: 60px 0 20px 0;
+	h3{
+		font-size: 24px;
+		color: #fff;
+	}
+	.src-item{
+		background: #fff;
+		border-top: 6px solid #90bed5;
+		border-radius: 3px;
+		padding: 18px 18px 0 20px;
+		height: 186px;
+		width: 31.72%;
+		margin-bottom: 62px;
+		text-align: left;
+		& + .src-item{
+			margin-left: 25px;
+		}
+		h4{
+			font-size: 18px;
+			color: #515a60;
+			margin-bottom: 12px;
+		}
+		p{
+			font-size: 16px;
+			color: #6c767e;
+			width: 100%;
+		}
+		a{
+			display: inline-block;
+			color: #30436b;
+			font-weight: bold;
+			font-size: 16px;
+			padding: 0;
+			&:hover{
+				color: #f26523;
+			}
+		}
+	}
+	.btn-white{
+		margin: 50px 0 78px 0;
+		li{
+			display: inline-block;
+			a{
+				color: #fff;
+				font-size: 16px;
+				border: 1px solid #fff;
+				border-radius: 3px;
+				padding: 15px;
+				margin-left: 26px;
+				&:hover{
+					background: #f26523;
+				}
+			}
+		}
+	}
+}
+.bg-white{
+	h2{
+		font-size: 38px;
+		color: #515a60;
+		margin: 26px 0 75px 0;
+	}
+	.btn-orange{
+		margin: 0 0 28px 0;
+		li{
+			display: inline-block;
+			margin: 0 0 28px 0;
+		    a{
+		    	float: left;
+		    	color: #f26523;
+				font-size: 16px;
+				border: 1px solid #f26523;
+				border-radius: 3px;
+				padding: 15px;
+				margin-left: 26px;
+				&:hover{
+					color: #fff;
+					background: #f26523;
+				}
+		    }
+		}
+	}
+	.banner{
+		height: 103px;
+		background: #ef6224;
+		margin: 50px 0 0 0;
+		img{
+			float: left;
+			padding: 20px 0 0 27px;
+		}
+		p{
+			float: left;
+			color: #fff;
+			font-size: 30px;
+			padding: 38px 0 0 27px;
+		}
+		li{
+			height: 103px;
+			float: right;
+			font-size: 24px;
+			padding: 32px 38px 0 38px;
+			border-left: 2px solid #da5a1f;
+			a{
+				color: #fff;
+				.sub{
+					display: block;
+					font-size: 14px;
+					color: #a54619;
+					margin-top: 8px;
+					&:hover{
+    					color: #30436b;
+    				}
+				}
+			}
+		}
+	}
+}
+.bg-blue-last{
+	background: #30436b;
+	height: 160px;
+	margin-top: 45px;
+	.block-text{
+		float: left;
+		width: 500px;
+		text-align: left;
+	    h3{
+			font-size: 32px;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		p{
+			font-size: 16px;
+			color: #dde3ee;
+			line-height: 125%;
+		}
+	}
+	.btn-white{
+		li{
+			display: inline-block;
+			margin-top: 45px;
+			float: right;
+			& + li{
+				margin-right:22px;
+		    }
+			a{
+				color: #fff;
+				font-size: 16px;
+				border: 2px solid #fff;
+				border-radius: 3px;
+				padding: 15px;
+				&:hover{
+					background: #f26523;
+				}
+			}
+		}
+	}
 }
 
 
 
 
 
-
+	
 
 
 
