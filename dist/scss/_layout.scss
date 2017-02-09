@@ -76,10 +76,9 @@ input[type="checkbox"]{
 		}
 	}
 }
-
 .service-wrap .row{
 	overflow: hidden;
-	padding-top: 58px;
+	margin: 0 -10px;
 }
 .sub{
     font-size: 12px;
@@ -87,12 +86,24 @@ input[type="checkbox"]{
     	color: #30436b;
     }
 }
-.bg-blue{
-	background: $generalBgBlueBackground;
-}
-.bg-gray{
-	background: $generalBggreyBackground;
-	border-bottom: 1px solid #e4ebec;
+.btn{
+	border: 1px solid transparent;
+	padding: 14px 25px;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 18px;
+	&.btn-white{
+		border-color: #fff;
+		color: #fff;
+	}
+	&.btn-orange{
+		border-color: $generalOrange;
+		color: $generalOrange;
+		&:hover{
+			background: $generalOrange;
+			color: #fff;
+		}
+	}
 }
 .footer{
 	height: $desktopFooterHeight;
@@ -118,3 +129,11 @@ input[type="checkbox"]{
 		padding-top: 30px;
 	}
 }
+
+
+
+
+
+
+
+

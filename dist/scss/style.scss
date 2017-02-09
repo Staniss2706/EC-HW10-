@@ -5,7 +5,7 @@
 @import "sprite";
 @include sprites($spritesheet-sprites);
 @import "layout";
-
+@import "slick";
 
 .inner{
 	@extend %vertical-align;
@@ -33,7 +33,7 @@
 					font-size: 14px;
 					display: inline-block;
 					cursor: pointer;
-					padding: 8px 0 40px 0;
+					padding: 8px 0 17px 0;
 				}	
 				.first-form{
 					.form-control{
@@ -46,20 +46,31 @@
 					.input-group{
 						text-align: left;
 						margin-bottom: 13px;
-					}
-					.form-control{
-						width: 240px;
-						height: 49px;
-						margin-left: 6px;
+						div{
+							display: inline-block;
+							& + div{
+								margin-left: 6px;
+							}
+						label{
+							display: block;
+							padding-bottom: 10px;
+							font-size: 16px;
+						}
+						input{
+							width: 240px;
+							height: 49px;
+						}
 					}
 				}
 			}
-		}	
-	}
+		}
+	}	
+}
 .simple-block{
 	text-align: center;
 	font-size: 18px;
 	padding: 30px 0;
+	border-bottom: 1px solid #e4ebec;
 	a{
 		color: #f26523;
 		&:hover{
@@ -67,159 +78,172 @@
 		}
 	}
 }
-.service-item{
-	width: 33.3333%;
-	float: left;
-	height: 218px;
-	a{ 
-		display: block;
-		font-size: 20px;
-		color: #ef6223;
-		padding: 8px 0 12px 0;
-	    & + span{
-	    	color: inherit;
-	    } 
-	}
-	p{
-		font-size: 16px;
-		color: #6c767e;
-		line-height: 150%;
-		width: 70%;
-	}
-}
-.block{
-	height: 158px;
-	h2{
-		font-size: 24px;
-	}
-}
-.bg-blue{
-	padding: 60px 0 20px 0;
-	h3{
-		font-size: 24px;
-		color: #fff;
-	}
-	.src-item{
-		background: #fff;
-		border-top: 6px solid #90bed5;
-		border-radius: 3px;
-		padding: 18px 18px 0 20px;
-		height: 186px;
-		width: 31.72%;
-		margin-bottom: 62px;
-		text-align: left;
-		& + .src-item{
-			margin-left: 25px;
-		}
-		h4{
-			font-size: 18px;
-			color: #515a60;
-			margin-bottom: 12px;
+.service-wrap{
+	padding-top: 58px;
+	.service-item{
+		width: 33.3333%;
+		float: left;
+		height: 220px;
+		padding: 0 10px;
+		a{ 
+			display: block;
+			font-size: 20px;
+			color: #ef6223;
+			padding: 8px 0 12px 0;
 		}
 		p{
 			font-size: 16px;
 			color: #6c767e;
-			width: 100%;
-		}
-		a{
-			display: inline-block;
-			color: #30436b;
-			font-weight: bold;
-			font-size: 16px;
-			padding: 0;
-			&:hover{
-				color: #f26523;
-			}
+			line-height: 150%;
+			width: 70%;
 		}
 	}
-	.btn-white{
-		margin: 50px 0 78px 0;
-		li{
-			display: inline-block;
-			a{
-				color: #fff;
-				font-size: 16px;
-				border: 1px solid #fff;
-				border-radius: 3px;
-				padding: 15px;
-				margin-left: 26px;
-				&:hover{
-					background: #f26523;
+}
+.more-areas{
+	.title{
+		font-size: 24px;
+		color: #515a60;
+		margin: 40px 0 20px 0;
+		.sub:hover{
+			color: #ef6223;
+		}
+	}
+}
+.slider-wrap{
+	padding: 15px 0;
+	border-top: 1px solid #e2e6e7;
+	border-bottom: 1px solid #e2e6e7;
+	margin-bottom: 73px;
+	.areas-slider{
+		a{
+		font-size: 16px;
+		color: #f26523;
+		}
+	}
+}
+.legal-articles{
+	overflow: hidden;
+	.title{
+		font-size: 24px;
+		color: #fff;
+		text-align: center;
+		padding-bottom: 50px;
+	}
+	.news-row{
+		padding-top: 60px;
+		margin: 0 -10px;
+		.news-post{
+			width: 33.3333%;
+			float: left;
+			padding: 0 10px;
+			.news-content{
+				background: #fff;
+				border-radius: 2px;
+				border-top: 6px solid #90bed5;
+				.title{
+					font-size: 18px;
+					color: #515a60;
+					text-align: left;
+					padding: 20px 10px 15px 20px;
+					line-height: 125%;
 				}
+				p{
+					font-size: 16px;
+					color: #6c767e;
+					padding: 0 30px 23px 20px;
+					line-height: 150%;
+					a{
+						color: #30436b;
+						&:hover{
+							color: #f26523;
+						}
+					}
+				}	
 			}
 		}
 	}
 }
-.bg-white{
-	h2{
+.category-btn{
+	text-align: center;
+	.title{
+		font-size: 24px;
+		color: #fff;
+		padding: 60px 0 43px 0;
+	}
+	.btn{
+		font-size: 16px;
+		margin-bottom: 78px;
+		& + .btn{
+			margin-left: 24px;
+		}
+		&:hover{
+			background: $generalBgOrangeBackground;
+		}
+ 	}
+}
+.country-wrap{
+	.title{
 		font-size: 38px;
 		color: #515a60;
-		margin: 26px 0 75px 0;
+		text-align: center;
+		padding: 55px 0 75px 0;
 	}
-	.btn-orange{
-		margin: 0 0 28px 0;
-		li{
-			display: inline-block;
-			margin: 0 0 28px 0;
-		    a{
-		    	float: left;
-		    	color: #f26523;
-				font-size: 16px;
-				border: 1px solid #f26523;
-				border-radius: 3px;
-				padding: 15px;
-				margin-left: 26px;
-				&:hover{
-					color: #fff;
-					background: #f26523;
-				}
-		    }
+	.btn{
+		padding: 14px 15px;
+		margin-bottom: 28px;
+		& + .btn{
+			margin-left: 19px;
 		}
-	}
-	.banner{
-		height: 103px;
-		background: #ef6224;
-		margin: 50px 0 0 0;
-		img{
-			float: left;
-			padding: 20px 0 0 27px;
+		&:nth-child(6){
+			margin-left: 38px;
 		}
-		p{
-			float: left;
-			color: #fff;
-			font-size: 30px;
-			padding: 38px 0 0 27px;
-		}
-		li{
-			height: 103px;
-			float: right;
-			font-size: 24px;
-			padding: 32px 38px 0 38px;
-			border-left: 2px solid #da5a1f;
-			a{
-				color: #fff;
-				.sub{
-					display: block;
-					font-size: 14px;
-					color: #a54619;
-					margin-top: 8px;
-					&:hover{
-    					color: #30436b;
-    				}
-				}
-			}
-		}
-	}
+ 	}
 }
-.bg-blue-last{
-	background: #30436b;
-	height: 160px;
-	margin-top: 45px;
-	.block-text{
+.find-solicitor{
+	overflow: hidden;
+	margin: 50px 0 75px 0;
+    .find-text{
+    	width: 50%;
+    	float: left;
+    	padding: 20px 27px;
+    	@extend %vertical-align;
+        font-size: 30px;
+        color: #fff;  
+        span:last-child{
+        	padding-left: 20px;
+        }
+    }
+    .country-link{
+    	width: 50%;
+    	float: left;
+    	.link{
+    		width: 33.3333%;
+    		float: left;
+    		padding: 30px 0;
+    		text-align: center;
+    		font-size: 24px;
+    		color: #fff;
+    		border-left: 1px solid #da5a1f;
+    		span:last-child{
+    			display: block;
+    			font-size: 14px;
+    			color: #a54619;
+    			padding-top: 6px;
+    			&:hover{
+    				color: #30436b;
+    			}
+    		}
+    	}
+    }
+}
+.last-solicitor-block{
+	overflow: hidden;
+	padding: 45px 0 42px 0;
+	.last-text{
+		width: 50%;
 		float: left;
-		width: 500px;
-		text-align: left;
-	    h3{
+    	display: inline-block;
+		.title{
 			font-size: 32px;
 			color: #fff;
 			margin-bottom: 15px;
@@ -230,24 +254,16 @@
 			line-height: 125%;
 		}
 	}
-	.btn-white{
-		li{
-			display: inline-block;
-			margin-top: 45px;
-			float: right;
-			& + li{
-				margin-right:22px;
+	.last-link{
+		width: 50%;
+		display: inline-block;
+		text-align: right;
+		padding-top: 40px;
+		.btn{
+			margin-left: 45px;
+			&:hover{
+			background: $generalBgOrangeBackground;
 		    }
-			a{
-				color: #fff;
-				font-size: 16px;
-				border: 2px solid #fff;
-				border-radius: 3px;
-				padding: 15px;
-				&:hover{
-					background: #f26523;
-				}
-			}
 		}
 	}
 }
@@ -256,7 +272,6 @@
 
 
 
-	
 
 
 
