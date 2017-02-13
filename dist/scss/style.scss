@@ -13,22 +13,41 @@
 	background: url("../img/inner-bg.jpg") no-repeat top center;
 	background-size: cover;
 	text-align: center;
+	@media (max-width: 1023px){
+		height: auto;
+		padding: 40px 0;
+	}
 		.inner-block{
 			color: #fff;
 			h1{
 				font-size: 72px;
 				margin-bottom: 25px;
+			    @media (max-width: 767px){
+					font-size: 50px;
+				}
+				@media (max-width: 479px){
+					font-size: 30px;
+				}
 			}
 			& > span{
 				display: inline-block;
 				font-size: 28px;
 				margin-bottom: 40px;
+				@media (max-width: 767px){
+					font-size: 20px;
+				}
+				@media (max-width: 479px){
+					font-size: 15px;
+				}
 			}
 			.inner-form{
 				background: rgba(0, 0, 0, .50);
 				border-radius: 3px;
-				padding: 25px 35px 43px 35px;
+				padding: 25px 35px 15px 35px;
 				text-align: left;
+				@media (max-width: 479px){
+					padding: 15px 15px 15px 15px;
+				}
 				.more-option{
 					font-size: 14px;
 					display: inline-block;
@@ -38,7 +57,23 @@
 				.first-form{
 					.form-control{
 						width: 325px;
-						margin-right: 6px;
+						@media (max-width: 959px){
+							width: 100%;
+						}
+			        }
+			        .form-btn{
+			        	@media (max-width: 959px){
+							width: 100%;
+						}
+			        }
+			        input{
+			        	& + input{
+			        		margin-left: 6px;
+			        		@media (max-width: 959px){
+			        			margin-left: 0;
+			        			margin-top: 10px;
+			        		}
+			        	}
 			        }
 				}
 				.second-form{
@@ -48,17 +83,29 @@
 						margin-bottom: 13px;
 						div{
 							display: inline-block;
+							@media (max-width: 959px){
+								display: block;
+							}
 							& + div{
 								margin-left: 6px;
+								@media (max-width: 959px){
+									margin: 0;
+								}
 							}
 						label{
 							display: block;
 							padding-bottom: 10px;
 							font-size: 16px;
+							@media( max-width: 959px){
+								padding-top: 10px;
+							}
 						}
 						input{
 							width: 240px;
 							height: 49px;
+							@media (max-width: 959px){
+								width: 100%;
+							}
 						}
 					}
 				}
@@ -71,6 +118,12 @@
 	font-size: 18px;
 	padding: 30px 0;
 	border-bottom: 1px solid #e4ebec;
+	@media (max-width: 1099px){
+		font-size: 16px;
+	}
+	@media (max-width: 767px){
+		font-size: 10px;
+	}
 	a{
 		color: #f26523;
 		&:hover{
@@ -85,18 +138,46 @@
 		float: left;
 		height: 220px;
 		padding: 0 10px;
-		a{ 
-			display: block;
+		@media (max-width: 959px){
+			width: 50%;
+		}
+		@media (max-width: 599px){
+			width: 100%;
+			height: auto;
+		}
+		& + .service-item{
+			@media (max-width: 599px){
+				margin-top: 20px;
+			}
+		}
+		.title{
 			font-size: 20px;
-			color: #ef6223;
-			padding: 8px 0 12px 0;
+			padding-top: 8px;
+			@media (max-width: 479px){
+				width: 100%;
+				font-size: 16px;
+			}
+			a{
+			color: #f26523;
+			}
 		}
 		p{
-			font-size: 16px;
 			color: #6c767e;
+			font-size: 16px;
 			line-height: 150%;
-			width: 70%;
-		}
+			padding: 8px 0 12px 0;
+			width: 70%;	
+			@media (max-width: 1099px){
+				width: 80%;
+			}
+			@media (max-width: 767px){
+				width: 95%;
+			}
+			@media (max-width: 479px){
+				width: 100%;
+				font-size: 12px;
+			}
+		}	
 	}
 }
 .more-areas{
@@ -104,6 +185,9 @@
 		font-size: 24px;
 		color: #515a60;
 		margin: 40px 0 20px 0;
+		@media (max-width: 479px){
+			font-size: 16px;
+		}
 		.sub:hover{
 			color: #ef6223;
 		}
@@ -114,10 +198,17 @@
 	border-top: 1px solid #e2e6e7;
 	border-bottom: 1px solid #e2e6e7;
 	margin-bottom: 73px;
+	@media (max-width: 479px){
+		margin-bottom: 30px;
+	}	
 	.areas-slider{
 		a{
+		line-height: 1.2;
 		font-size: 16px;
 		color: #f26523;
+		@media (max-width: 479px){
+			font-size: 12px;
+			}
 		}
 	}
 }
@@ -128,14 +219,29 @@
 		color: #fff;
 		text-align: center;
 		padding-bottom: 50px;
+		@media (max-width: 479px){
+			font-size: 16px;
+			padding-bottom: 30px;
+		}
 	}
 	.news-row{
 		padding-top: 60px;
 		margin: 0 -10px;
+		@media (max-width: 479px){
+			padding-top: 30px;
+		}
 		.news-post{
 			width: 33.3333%;
 			float: left;
 			padding: 0 10px;
+			@media( max-width: 959px){
+				width: 100%;
+			}
+			& + .news-post{
+				@media( max-width: 959px){
+					margin-top: 10px;
+				}
+			}
 			.news-content{
 				background: #fff;
 				border-radius: 2px;
@@ -145,13 +251,19 @@
 					color: #515a60;
 					text-align: left;
 					padding: 20px 10px 15px 20px;
-					line-height: 125%;
+					line-height: 135%;
+					@media (max-width: 479px){
+						font-size: 14px;
+					}
 				}
 				p{
 					font-size: 16px;
 					color: #6c767e;
 					padding: 0 30px 23px 20px;
 					line-height: 150%;
+					@media (max-width: 479px){
+						font-size: 12px;
+					}
 					a{
 						color: #30436b;
 						&:hover{
@@ -165,16 +277,34 @@
 }
 .category-btn{
 	text-align: center;
+	padding-bottom: 78px;
+	@media (max-width: 479px){
+		padding-bottom: 30px;	
+	}
 	.title{
 		font-size: 24px;
 		color: #fff;
 		padding: 60px 0 43px 0;
+		@media (max-width: 479px){
+			font-size: 16px;
+			padding: 30px 0 30px 0;
+		}
 	}
 	.btn{
 		font-size: 16px;
-		margin-bottom: 78px;
+		@media (max-width: 767px){
+			display: block;
+			margin-top: 10px;
+		}
+		@media (max-width: 479px){
+			font-size: 12px;
+		}
 		& + .btn{
 			margin-left: 24px;
+			@media (max-width: 767px){
+				margin: 0;
+				margin-top: 10px;
+			}
 		}
 		&:hover{
 			background: $generalBgOrangeBackground;
@@ -182,33 +312,61 @@
  	}
 }
 .country-wrap{
+	text-align: center;
 	.title{
 		font-size: 38px;
 		color: #515a60;
 		text-align: center;
 		padding: 55px 0 75px 0;
+		@media (max-width: 479px){
+			font-size: 16px;
+			padding: 30px 0 30px 0;
+		}
 	}
 	.btn{
 		padding: 14px 15px;
 		margin-bottom: 28px;
+		@media (max-width: 767px){
+			display: block;
+			margin-bottom: 10px;
+		}
+		@media (max-width: 479px){
+			font-size: 12px;
+		}
 		& + .btn{
 			margin-left: 19px;
-		}
-		&:nth-child(6){
-			margin-left: 38px;
+			@media (max-width: 767px){
+				margin: 0;
+				margin-bottom: 10px;
+			}
 		}
  	}
 }
 .find-solicitor{
 	overflow: hidden;
+	text-align: left;
 	margin: 50px 0 75px 0;
+	 @media (max-width: 479px){
+		margin: 30px 0 30px 0;
+	}	
     .find-text{
     	width: 50%;
     	float: left;
-    	padding: 20px 27px;
+    	padding: 21px 27px;
     	@extend %vertical-align;
         font-size: 30px;
         color: #fff;  
+        @media (max-width: 959px){
+        	font-size: 20px;
+        }
+        @media (max-width: 767px){
+        	width: 100%;
+        	text-align: center;
+        }
+        @media (max-width: 479px){
+			font-size: 14px;
+			padding: 21px 27px 0 27px;
+		}	
         span:last-child{
         	padding-left: 20px;
         }
@@ -216,6 +374,9 @@
     .country-link{
     	width: 50%;
     	float: left;
+    	@media (max-width: 767px){
+        	width: 100%;
+        }
     	.link{
     		width: 33.3333%;
     		float: left;
@@ -224,11 +385,23 @@
     		font-size: 24px;
     		color: #fff;
     		border-left: 1px solid #da5a1f;
+    		@media (max-width: 959px){
+    			font-size: 20px;
+    		}
+    		@media (max-width: 767px){
+        		border: none;
+        	}
+        	@media (max-width: 479px){
+				font-size: 14px;
+			}	
     		span:last-child{
     			display: block;
     			font-size: 14px;
     			color: #a54619;
     			padding-top: 6px;
+    			@media (max-width: 767px){
+        			font-size: 12px;
+        		}
     			&:hover{
     				color: #30436b;
     			}
@@ -243,15 +416,25 @@
 		width: 50%;
 		float: left;
     	display: inline-block;
+    	@media (max-width: 767px){
+			width: 100%;
+			text-align: center;
+		}
 		.title{
 			font-size: 32px;
 			color: #fff;
 			margin-bottom: 15px;
+			@media (max-width: 479px){
+				font-size: 16px;
+			}
 		}
 		p{
 			font-size: 16px;
 			color: #dde3ee;
 			line-height: 125%;
+			@media (max-width: 479px){
+				font-size: 12px;
+			}
 		}
 	}
 	.last-link{
@@ -259,8 +442,25 @@
 		display: inline-block;
 		text-align: right;
 		padding-top: 40px;
+		@media (max-width: 767px){
+			width: 100%;
+			text-align: center;
+		}
 		.btn{
-			margin-left: 45px;
+			@media (max-width: 479px){
+				font-size: 12px;
+				width: 100%;
+			}	
+			& + .btn{
+				margin-left: 45px;
+				@media (max-width: 959px){
+					margin-left: 20px;
+				}
+				@media (max-width: 479px){
+					margin: 0;
+					margin-top: 10px;
+				}	
+			}
 			&:hover{
 			background: $generalBgOrangeBackground;
 		    }

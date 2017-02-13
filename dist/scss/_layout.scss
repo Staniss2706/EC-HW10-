@@ -4,6 +4,12 @@
 	width: $desktopContainerWidth;
 	padding: 0 10px;
 	margin: 0 auto;
+	@media (max-width: 1099px){
+		width: $mediumContainerWidth;
+	}
+	@media (max-width: 1023px){
+		width: 100%;
+	}
 }
 .header{
 	height: $desktopHeaderHeight;
@@ -12,10 +18,14 @@
 	.logo{
 		float: left;
 		padding-top: 15px;
+		position: absolute;
 	}
 	.header-nav{
 		float: right;
 		padding: 26px 20px 0 0;
+		@media (max-width: 767px){
+			display: none;
+		}
 		li{
 			display: inline-block;
 			margin-right: 25px;
@@ -25,7 +35,18 @@
 					color: $generalOrange;
 				}
 			}
+			input{
+				display: none;
+			}
 		}
+	}
+}
+.slicknav_menu {
+	display:none;
+	@media (max-width: 767px){
+		display: block;
+		float: right;
+		margin-right: -10px;
 	}
 }
 .form-control{
@@ -35,6 +56,9 @@
 	font-size: 16px;
 	color: #7e878d;
 	padding: 0 14px 0 14px;
+	@media (max-width: 479px){
+		height: 49px;
+	}
 }
 .form-btn{
 	height: 57px;
@@ -43,18 +67,27 @@
 	font-size: 16px;
 	color: #fff;
 	padding: 0 27px 0 27px;
+	@media (max-width: 479px){
+		height: 49px;
+	}
 }
 .icon{
 	display: inline-block;
 }
 input[type="checkbox"]{
 	display: none;
-
 	& + label{
 		cursor: pointer;
 		font-size: 16px;
 		margin-right: 51px;
-		
+		@media (max-width: 767px){
+			font-size: 12px;
+			margin-right: 15px;
+		}
+		@media (max-width: 599px){
+			display: block;
+			margin-top: 10px;
+		}
 		&::before{
 			content: "";
 			display: inline-block;
@@ -112,10 +145,17 @@ input[type="checkbox"]{
 	.footer-list{
 		padding: 42px 0 0 0;
 		text-align: center;
+		@media (max-width: 479px){
+			padding-top: 20px;
+		}
 		li{
 			display: inline-block;
 			font-size: 12px;
 			margin: 0 12px 36px 0;
+			@media (max-width: 479px){
+				margin: 0 10px 36px 0;
+				font-size: 10px;
+			}	
 			a{
 				color: #515a60;
 				&:hover{

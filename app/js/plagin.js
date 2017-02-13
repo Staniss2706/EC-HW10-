@@ -20,5 +20,25 @@
 		slidesToScroll: 1,
 		autoplay: false,
 		autoplaySpeed: 2000,
+		responsive: [
+			{
+				breakpoint: 1023,
+				settings:{
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 767,
+				settings:{
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 479,
+				settings:{
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 })(jQuery);
